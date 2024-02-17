@@ -1,20 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Qr Code Generator</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="head">
-        <h2>Enter your text or Url</h3>
-        <input type="text" placeholder="Text or url" id="qrText">
-        <div id="imgBox">
-            <img src="" id="qrImage" alt="no input found">
-        </div>
-        <button onclick="generateQR()">Generate QR Code</button>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QR Code Generator</title>
+    <!--- QR Code CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <input type="text" id="userInput" placeholder="Enter some text or URL" />
+      <div class="options">
+        <select class="sizeOptions">
+          <option value="100" selected>100 x 100</option>
+          <option value="200">200 x 200</option>
+        </select>
+        <input type="color" id="BGColor" class="color-inp" />
+        <input type="color" id="FGColor" class="color-inp" />
+      </div>
+      <div class="box">
+        <button id="submit" disabled>Generate</button>
+        <a href="#" id="download">Download</a>
+      </div>
+      <div class="container"></div>
     </div>
-</body>
-<script src="script.js"></script>
+    <script src="script.js"></script>
+  </body>
 </html>
